@@ -51,6 +51,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'Josefin Sans'
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .step{border-top:3px solid var(--accent);padding-top:10px;font-size:14px}
 .step b{display:block;font:700 26px 'Playfair Display',Georgia,serif;color:light-dark(#8a5e28,var(--gold-light));line-height:1;margin-bottom:6px}
+.review{margin:22px 0 0;padding:20px;border-radius:18px;background:var(--navy);color:var(--cream);display:grid;gap:14px;border:1px solid var(--navy-mid)}
+.review h2{margin:0 0 6px;font:700 22px/1.2 'Playfair Display',Georgia,serif;color:var(--cream)}
+.review p{margin:0;color:#c9cfdc;font-size:15px}
+.btn.ghostgold{background:transparent;color:var(--gold-light);border:2px solid var(--gold)}
+.btn.ghostgold:focus-visible{outline-color:var(--cream)}
 .talk{margin:22px 0 0;padding:22px 0;border-top:1px solid var(--line)}
 .talk p{margin:0 0 14px;color:var(--soft)}
 .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
@@ -88,6 +93,14 @@ footer{padding:20px 0 36px;color:var(--soft);font-size:13px;border-top:1px solid
       <div class="step"><b>2</b>Tell me where to send it</div>
       <div class="step"><b>3</b>It hits your inbox in about a minute</div>
     </div>
+  </section>
+
+  <section class="review">
+    <div>
+      <h2>Worked with me?</h2>
+      <p>A quick review helps Utah families find an agent they can trust. Google, Facebook or Zillow, whichever is easiest.</p>
+    </div>
+    <a class="btn ghostgold" href="https://tylorsreviews.netlify.app/" target="_blank" rel="noopener">Leave a review</a>
   </section>
 
   <section class="talk">
