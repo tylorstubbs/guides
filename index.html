@@ -10,52 +10,51 @@
 <meta property="og:image" content="https://tylorstubbs.github.io/guides/og.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 /* VOICE: a straight talking local agent, warm and quick, built for a thumb on a phone
    IDEA: a trailhead sign at the base of Timpanogos: pick your trail, get the map
    PICTURE: a real photo of Timpanogos over Utah Valley, the name set on it
-   COLOUR and TYPE: sunrise coral sky, granite charcoal ridges, white ground; Archivo 800 + Archivo
+   COLOUR and TYPE: Stubbs Realty brand: navy, gold, cream; Playfair Display + Josefin Sans
    LAYOUT: one calm column, hero scene, four guide cards, how it works, contact, footer */
 :root{color-scheme:light dark;
---bg:light-dark(#ffffff,#121417);--ink:light-dark(#1c1f24,#f1efe9);--soft:light-dark(#5b6068,#a9adb4);
---card:light-dark(#f6f3ee,#1d2025);--line:light-dark(#e6e0d6,#2c3037);
---sky1:light-dark(#ffb38a,#5a2a2a);--sky2:light-dark(#ff7a52,#2a1c22);
---r1:light-dark(#7d7f86,#3b3f47);--r2:light-dark(#4b4f57,#2a2d33);--r3:light-dark(#2a2d33,#191b1f);
---accent:#e8502f;--accentInk:#ffffff}
+--navy-deep:#0f1c32;--navy:#1b2a4a;--navy-mid:#2e4170;--gold:#c8965a;--gold-light:#d4a96a;--cream:#f5e8d4;--white:#fdfbf7;--slate:#6b7a99;
+--bg:light-dark(var(--white),var(--navy-deep));--ink:light-dark(var(--navy-deep),var(--cream));--soft:light-dark(#4a5672,#b6bfd3);
+--card:light-dark(#ffffff,var(--navy));--line:light-dark(#e8dcc6,#2e4170);
+--accent:var(--gold);--accentInk:var(--navy-deep)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Archivo,system-ui,sans-serif;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'Josefin Sans',system-ui,sans-serif;overflow-x:clip}
 .wrap{max-width:560px;margin:0 auto;padding:0 18px}
-.hero{position:relative;height:clamp(300px,62vw,420px);background:#3b4250;overflow:hidden}
+.hero{position:relative;height:clamp(300px,62vw,420px);background:var(--navy-deep);overflow:hidden;border-bottom:4px solid var(--gold)}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,24,0) 45%,rgba(15,18,24,.75) 100%)}
-.hero .txt{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:#fff;padding:0 18px}
-.hero h1{margin:0;font-weight:800;font-size:clamp(34px,10vw,52px);line-height:1.05;letter-spacing:-.01em;text-shadow:0 2px 18px rgba(0,0,0,.45)}
-.hero p{margin:6px 0 0;font-size:15px;opacity:.95}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,28,50,0) 40%,rgba(15,28,50,.85) 100%)}
+.hero .txt{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:var(--cream);padding:0 18px}
+.hero h1{margin:0;font:700 clamp(36px,10vw,54px)/1.05 'Playfair Display',Georgia,serif;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.hero p{margin:8px 0 0;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
 .intro{padding:26px 0 8px}
-.intro h2{margin:0 0 6px;font-size:clamp(24px,6vw,30px);line-height:1.1;font-weight:800;text-wrap:balance}
+.intro h2{margin:0 0 6px;font:700 clamp(26px,6.5vw,32px)/1.12 'Playfair Display',Georgia,serif;text-wrap:balance}
 .intro p{margin:0;color:var(--soft)}
 .guides{display:grid;gap:14px;padding:18px 0 8px}
-.g{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;display:grid;gap:10px}
+.g{background:var(--card);border:1px solid var(--line);box-shadow:0 2px 14px rgba(15,28,50,.06);border-radius:18px;padding:18px 18px 16px;display:grid;gap:10px}
 .g .top{display:flex;gap:14px;align-items:flex-start}
 .g svg{flex:none;width:46px;height:46px}
-.g h3{margin:0;font-size:19px;line-height:1.2;font-weight:800}
+.g h3{margin:0;font:700 20px/1.2 'Playfair Display',Georgia,serif}
 .g p{margin:2px 0 0;color:var(--soft);font-size:15px}
-.tag{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--accent)}
-.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:14px;background:var(--accent);color:var(--accentInk);font-weight:800;font-size:16px;text-decoration:none;border:0;padding:0 18px;transition:transform .15s}
+.tag{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:light-dark(#8a5e28,var(--gold-light))}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:14px;background:var(--accent);color:var(--accentInk);font-weight:700;font-size:16px;letter-spacing:.04em;text-decoration:none;border:0;padding:0 18px;transition:transform .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .btn.off{background:var(--line);color:var(--soft);pointer-events:none}
 .how{padding:22px 0 6px}
-.how h2,.talk h2{margin:0 0 12px;font-size:22px;font-weight:800}
+.how h2,.talk h2{margin:0 0 12px;font:700 24px/1.2 'Playfair Display',Georgia,serif}
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .step{border-top:3px solid var(--accent);padding-top:10px;font-size:14px}
-.step b{display:block;font-size:22px;line-height:1;margin-bottom:6px}
+.step b{display:block;font:700 26px 'Playfair Display',Georgia,serif;color:light-dark(#8a5e28,var(--gold-light));line-height:1;margin-bottom:6px}
 .talk{margin:22px 0 0;padding:22px 0;border-top:1px solid var(--line)}
 .talk p{margin:0 0 14px;color:var(--soft)}
 .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.ghost{display:flex;flex-direction:column;justify-content:center;min-height:60px;border:1.5px solid var(--line);border-radius:14px;padding:8px 14px;text-decoration:none;color:var(--ink);font-weight:800}
+.ghost{display:flex;flex-direction:column;justify-content:center;min-height:60px;border:1.5px solid var(--line);border-radius:14px;padding:8px 14px;text-decoration:none;color:var(--ink);font-weight:700}
 .ghost span{font-weight:400;font-size:14px;color:var(--soft)}
 .ghost:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 footer{padding:20px 0 36px;color:var(--soft);font-size:13px;border-top:1px solid var(--line)}
